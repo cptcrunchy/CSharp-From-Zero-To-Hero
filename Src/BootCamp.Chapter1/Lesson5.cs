@@ -5,33 +5,37 @@ namespace BootCamp.Chapter1
 {
 	static class Lesson5
 	{
-		internal static void Sort(int[] values)
+		internal static bool IsNotNullAndEmpty(int[] array)
 		{
-			if (values != null && values.Length > 0) Array.Sort(values);
+			return array != null && array.Length > 0;
+		}
+		internal static void Sort(int[] array)
+		{
+			if (IsNotNullAndEmpty(array)) Array.Sort(array);
 		}
 		internal static void Reverse(int[] values)
 		{
 			if (values != null && values.Length > 0) Array.Reverse(values);
 		}
 
-		internal static int[] RemoveLast(int[] values)
+		internal static int[] RemoveLast(int[] array)
 		{
-			if (values != null && values.Length > 0)
+			if (IsNotNullAndEmpty(array))
 			{
-				int[] modifiedArray = new int[values.Length - 1];
+				int[] modifiedArray = new int[array.Length - 1];
 
-				Array.Copy(values, modifiedArray, values.Length - 1);
+				Array.Copy(array, modifiedArray, array.Length - 1);
 
 				return modifiedArray;
 			}
 			else
 			{
-				return values;
+				return array;
 			}
 		}
 		internal static int[] InsertLast(int[] array, int number)
 		{
-			if (array != null && array.Length > 0)
+			if (IsNotNullAndEmpty(array))
 			{
 
 				int[] modifiedArray = new int[array.Length + 1];
@@ -49,25 +53,25 @@ namespace BootCamp.Chapter1
 			}
 		}
 
-		internal static int[] RemoveFirst(int[] values)
+		internal static int[] RemoveFirst(int[] array)
 		{
-			if (values != null && values.Length > 0)
+			if (IsNotNullAndEmpty(array))
 			{
-				int[] modifiedArray = new int[values.Length - 1];
+				int[] modifiedArray = new int[array.Length - 1];
 
-				Array.Copy(values, 1, modifiedArray, 0, values.Length - 1);
+				Array.Copy(array, 1, modifiedArray, 0, array.Length - 1);
 
 				return modifiedArray;
 			}
 			else
 			{
-				return values;
+				return array;
 			}
 		}
 		internal static int[] InsertFirst(int[] array, int number)
 		{
 
-			if (array != null && array.Length > 0)
+			if (IsNotNullAndEmpty(array))
 			{
 				int[] modifiedArray = new int[array.Length + 1];
 				modifiedArray.SetValue(number, 0);
