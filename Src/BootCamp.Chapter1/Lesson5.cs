@@ -20,7 +20,7 @@ namespace BootCamp.Chapter1
 			{
 				int[] modifiedArray = new int[values.Length - 1];
 
-				Array.Copy(values, modifiedArray, values.Length -1);
+				Array.Copy(values, modifiedArray, values.Length - 1);
 
 				return modifiedArray;
 			}
@@ -86,10 +86,10 @@ namespace BootCamp.Chapter1
 		internal static int[] RemoveAt(int[] array, int index)
 		{
 			bool HasInvalidArguments = array == null || index < 0 || index >= array.Length;
-			
+
 			if (HasInvalidArguments)
 			{
-				return array;			
+				return array;
 			}
 			else
 			{
@@ -116,7 +116,7 @@ namespace BootCamp.Chapter1
 				{
 					return array;
 				}
-				
+
 			}
 			else
 			{
