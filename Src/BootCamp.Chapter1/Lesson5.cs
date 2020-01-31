@@ -13,9 +13,9 @@ namespace BootCamp.Chapter1
 		{
 			if (IsNotNullAndEmpty(array)) Array.Sort(array);
 		}
-		internal static void Reverse(int[] values)
+		internal static void Reverse(int[] array)
 		{
-			if (values != null && values.Length > 0) Array.Reverse(values);
+			if (IsNotNullAndEmpty(array)) Array.Reverse(array);
 		}
 
 		internal static int[] RemoveLast(int[] array)
