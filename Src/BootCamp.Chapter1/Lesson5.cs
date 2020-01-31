@@ -5,14 +5,22 @@ namespace BootCamp.Chapter1
 {
 	static class Lesson5
 	{
+		/// <summary>
+		/// This helper method will take in an array of type int and return true if
+		/// the array is not null and the array's length is greater than 0
+		/// </summary>
+		/// <param name="array"></param>
+		/// <returns></returns>
 		internal static bool IsNotNullAndEmpty(int[] array)
 		{
 			return array != null && array.Length > 0;
 		}
+
 		internal static void Sort(int[] array)
 		{
 			if (IsNotNullAndEmpty(array)) Array.Sort(array);
 		}
+		
 		internal static void Reverse(int[] array)
 		{
 			if (IsNotNullAndEmpty(array)) Array.Reverse(array);
@@ -33,6 +41,7 @@ namespace BootCamp.Chapter1
 				return array;
 			}
 		}
+		
 		internal static int[] InsertLast(int[] array, int number)
 		{
 			if (IsNotNullAndEmpty(array))
@@ -68,6 +77,7 @@ namespace BootCamp.Chapter1
 				return array;
 			}
 		}
+		
 		internal static int[] InsertFirst(int[] array, int number)
 		{
 
@@ -105,6 +115,7 @@ namespace BootCamp.Chapter1
 				return modifiedArray;
 			}
 		}
+		
 		internal static int[] InsertAt(int[] array, int number, int index)
 		{
 			/// <returns>A new array with element inserted at a given index.
